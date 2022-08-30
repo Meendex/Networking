@@ -9,8 +9,8 @@ import Foundation
 
 class NetworkManager {
     
-    var networkDelegate: ViewContract?
-    func getRooms() {
+    //var networkDelegate: ViewContract?
+    func getRooms(callback: @escaping([Rooms]?, Error?) -> Void) {
         let urlSession = URLSession.shared
         
         guard let url = URL(string: "https://61e947967bc0550017bc61bf.mockapi.io/api/v1/rooms") else {
@@ -24,7 +24,8 @@ class NetworkManager {
             do {
               let rooms = try
                 jsonDecorder.decode([Rooms].self, from: data)
-                self.networkDelegate?.setRooms(rooms: rooms)
+                callback(rooms, nil)
+                //self.networkDelegate?.setRooms(rooms: rooms)
             }catch {
                 print(error)
             }

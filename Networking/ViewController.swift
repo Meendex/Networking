@@ -14,10 +14,13 @@ class ViewController: UIViewController {
     var rooms: [Rooms]?
     override func viewDidLoad() {
         super.viewDidLoad()
-
         tableView.dataSource = self
-        networkManager.networkDelegate = self
-        networkManager.getRooms()
+        networkManager.getRooms {rooms, error in self.rooms = rooms
+            DispatchQueue.main.async {self.tableView.reloadData()
+            }
+    }
+        //networkManager.networkDelegate = self
+        //networkManager.getRooms()
     }
 }
 
@@ -40,7 +43,7 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: ViewContract {
+/*extension ViewController: ViewContract {
     func setRooms(rooms:[Rooms]){
         self.rooms = rooms
         DispatchQueue.main.async {
@@ -51,4 +54,4 @@ extension ViewController: ViewContract {
 
 protocol ViewContract {
     func setRooms(rooms:[Rooms])
-}
+}*/

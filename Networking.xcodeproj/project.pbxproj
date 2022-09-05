@@ -90,11 +90,9 @@
 		48110A5C28C5D345009BD9A6 /* Rooms */ = {
 			isa = PBXGroup;
 			children = (
-				48F1CCC328C68FB0004637FA /* RoomViewModel.swift */,
-				4882281E28B8A7AA0084D4A1 /* RoomTableViewCell.swift */,
-				488227F228B8A0FD0084D4A1 /* RoomsViewController.swift */,
-				481109C628BE63DC009BD9A6 /* Rooms.swift */,
-				481109C828BE659A009BD9A6 /* RoomsNetworkManager.swift */,
+				48F1CCCA28C6B1C2004637FA /* Model */,
+				48F1CCC928C6B18E004637FA /* ViewModel */,
+				48F1CCC828C6B16B004637FA /* View */,
 			);
 			path = Rooms;
 			sourceTree = "<group>";
@@ -149,6 +147,32 @@
 				4882281128B8A0FE0084D4A1 /* NetworkingUITestsLaunchTests.swift */,
 			);
 			path = NetworkingUITests;
+			sourceTree = "<group>";
+		};
+		48F1CCC828C6B16B004637FA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4882281E28B8A7AA0084D4A1 /* RoomTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		48F1CCC928C6B18E004637FA /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				488227F228B8A0FD0084D4A1 /* RoomsViewController.swift */,
+				481109C828BE659A009BD9A6 /* RoomsNetworkManager.swift */,
+				48F1CCC328C68FB0004637FA /* RoomViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		48F1CCCA28C6B1C2004637FA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				481109C628BE63DC009BD9A6 /* Rooms.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

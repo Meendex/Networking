@@ -8,17 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		481109C728BE63DC009BD9A6 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481109C628BE63DC009BD9A6 /* Rooms.swift */; };
-		481109C928BE659A009BD9A6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481109C828BE659A009BD9A6 /* NetworkManager.swift */; };
+		481109C928BE659A009BD9A6 /* RoomsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481109C828BE659A009BD9A6 /* RoomsNetworkManager.swift */; };
 		488227EF28B8A0FD0084D4A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488227EE28B8A0FD0084D4A1 /* AppDelegate.swift */; };
 		488227F128B8A0FD0084D4A1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488227F028B8A0FD0084D4A1 /* SceneDelegate.swift */; };
-		488227F328B8A0FD0084D4A1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488227F228B8A0FD0084D4A1 /* ViewController.swift */; };
+		488227F328B8A0FD0084D4A1 /* RoomsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488227F228B8A0FD0084D4A1 /* RoomsViewController.swift */; };
 		488227F628B8A0FD0084D4A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488227F428B8A0FD0084D4A1 /* Main.storyboard */; };
 		488227F828B8A0FE0084D4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488227F728B8A0FE0084D4A1 /* Assets.xcassets */; };
 		488227FB28B8A0FE0084D4A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488227F928B8A0FE0084D4A1 /* LaunchScreen.storyboard */; };
 		4882280628B8A0FE0084D4A1 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882280528B8A0FE0084D4A1 /* NetworkingTests.swift */; };
 		4882281028B8A0FE0084D4A1 /* NetworkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882280F28B8A0FE0084D4A1 /* NetworkingUITests.swift */; };
 		4882281228B8A0FE0084D4A1 /* NetworkingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882281128B8A0FE0084D4A1 /* NetworkingUITestsLaunchTests.swift */; };
-		4882281F28B8A7AA0084D4A1 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882281E28B8A7AA0084D4A1 /* TableViewCell.swift */; };
+		4882281F28B8A7AA0084D4A1 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882281E28B8A7AA0084D4A1 /* RoomTableViewCell.swift */; };
+		48F1CCC428C68FB0004637FA /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CCC328C68FB0004637FA /* RoomViewModel.swift */; };
+		48F1CCC628C6A65B004637FA /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CCC528C6A65B004637FA /* FakeNetworkManager.swift */; };
+		48F1CCC728C6A65B004637FA /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CCC528C6A65B004637FA /* FakeNetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,11 +43,11 @@
 
 /* Begin PBXFileReference section */
 		481109C628BE63DC009BD9A6 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
-		481109C828BE659A009BD9A6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		481109C828BE659A009BD9A6 /* RoomsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsNetworkManager.swift; sourceTree = "<group>"; };
 		488227EB28B8A0FD0084D4A1 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		488227EE28B8A0FD0084D4A1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		488227F028B8A0FD0084D4A1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		488227F228B8A0FD0084D4A1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		488227F228B8A0FD0084D4A1 /* RoomsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsViewController.swift; sourceTree = "<group>"; };
 		488227F528B8A0FD0084D4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		488227F728B8A0FE0084D4A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		488227FA28B8A0FE0084D4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -54,7 +57,9 @@
 		4882280B28B8A0FE0084D4A1 /* NetworkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4882280F28B8A0FE0084D4A1 /* NetworkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingUITests.swift; sourceTree = "<group>"; };
 		4882281128B8A0FE0084D4A1 /* NetworkingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4882281E28B8A7AA0084D4A1 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		4882281E28B8A7AA0084D4A1 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
+		48F1CCC328C68FB0004637FA /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
+		48F1CCC528C6A65B004637FA /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +87,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		48110A5C28C5D345009BD9A6 /* Rooms */ = {
+			isa = PBXGroup;
+			children = (
+				48F1CCC328C68FB0004637FA /* RoomViewModel.swift */,
+				4882281E28B8A7AA0084D4A1 /* RoomTableViewCell.swift */,
+				488227F228B8A0FD0084D4A1 /* RoomsViewController.swift */,
+				481109C628BE63DC009BD9A6 /* Rooms.swift */,
+				481109C828BE659A009BD9A6 /* RoomsNetworkManager.swift */,
+			);
+			path = Rooms;
+			sourceTree = "<group>";
+		};
 		488227E228B8A0FD0084D4A1 = {
 			isa = PBXGroup;
 			children = (
@@ -105,12 +122,9 @@
 		488227ED28B8A0FD0084D4A1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				48110A5C28C5D345009BD9A6 /* Rooms */,
 				488227EE28B8A0FD0084D4A1 /* AppDelegate.swift */,
 				488227F028B8A0FD0084D4A1 /* SceneDelegate.swift */,
-				481109C828BE659A009BD9A6 /* NetworkManager.swift */,
-				481109C628BE63DC009BD9A6 /* Rooms.swift */,
-				4882281E28B8A7AA0084D4A1 /* TableViewCell.swift */,
-				488227F228B8A0FD0084D4A1 /* ViewController.swift */,
 				488227F428B8A0FD0084D4A1 /* Main.storyboard */,
 				488227F728B8A0FE0084D4A1 /* Assets.xcassets */,
 				488227F928B8A0FE0084D4A1 /* LaunchScreen.storyboard */,
@@ -123,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				4882280528B8A0FE0084D4A1 /* NetworkingTests.swift */,
+				48F1CCC528C6A65B004637FA /* FakeNetworkManager.swift */,
 			);
 			path = NetworkingTests;
 			sourceTree = "<group>";
@@ -290,12 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				481109C928BE659A009BD9A6 /* NetworkManager.swift in Sources */,
-				488227F328B8A0FD0084D4A1 /* ViewController.swift in Sources */,
-				4882281F28B8A7AA0084D4A1 /* TableViewCell.swift in Sources */,
+				481109C928BE659A009BD9A6 /* RoomsNetworkManager.swift in Sources */,
+				488227F328B8A0FD0084D4A1 /* RoomsViewController.swift in Sources */,
+				4882281F28B8A7AA0084D4A1 /* RoomTableViewCell.swift in Sources */,
 				488227EF28B8A0FD0084D4A1 /* AppDelegate.swift in Sources */,
 				488227F128B8A0FD0084D4A1 /* SceneDelegate.swift in Sources */,
+				48F1CCC428C68FB0004637FA /* RoomViewModel.swift in Sources */,
 				481109C728BE63DC009BD9A6 /* Rooms.swift in Sources */,
+				48F1CCC628C6A65B004637FA /* FakeNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,6 +321,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4882280628B8A0FE0084D4A1 /* NetworkingTests.swift in Sources */,
+				48F1CCC728C6A65B004637FA /* FakeNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

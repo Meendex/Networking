@@ -7,42 +7,41 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class RoomsViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    let networkManager = NetworkManager()
-    var rooms: [Rooms]?
+    var roomViewModel = RoomViewModel()
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
-        networkManager.getRooms {rooms, error in self.rooms = rooms
+        roomViewModel.dataDidReceived = {
             DispatchQueue.main.async {self.tableView.reloadData()
             }
     }
+        roomViewModel.RoomsData()
         //networkManager.networkDelegate = self
         //networkManager.getRooms()
     }
 }
-
-extension ViewController: UITableViewDataSource {
+extension RoomsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return rooms?.count ?? 0
+        if let rooms = roomViewModel.rooms {
+        return rooms.count
+    }
+        return 0
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? TableViewCell else {
+        if roomViewModel.rooms != nil {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? RoomTableViewCell else {
             return UITableViewCell()
         }
-        if let roomData = rooms?[indexPath.row] {
-
-            cell.createAtLabel.text = roomData.createdAt
-            cell.OccupiedLabel.text = String(roomData.isOccupied)
-            cell.maxOccupancyLabel.text = String(roomData.maxOccupancy)
-            cell.idLabel.text = roomData.id
+        if let room = roomViewModel.rooms?[indexPath.row] {
+            cell.updateData(with: room)
         }
-        return cell
+                return cell
+    }
+    return UITableViewCell()
     }
 }
-
 /*extension ViewController: ViewContract {
     func setRooms(rooms:[Rooms]){
         self.rooms = rooms

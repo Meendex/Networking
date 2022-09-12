@@ -22,6 +22,7 @@
 		48F1CCC428C68FB0004637FA /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CCC328C68FB0004637FA /* RoomViewModel.swift */; };
 		48F1CCC628C6A65B004637FA /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CCC528C6A65B004637FA /* FakeNetworkManager.swift */; };
 		48F1CCC728C6A65B004637FA /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CCC528C6A65B004637FA /* FakeNetworkManager.swift */; };
+		48F1CCCD28C7F6D9004637FA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CCCC28C7F6D9004637FA /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		4882281E28B8A7AA0084D4A1 /* RoomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomTableViewCell.swift; sourceTree = "<group>"; };
 		48F1CCC328C68FB0004637FA /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
 		48F1CCC528C6A65B004637FA /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
+		48F1CCCC28C7F6D9004637FA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,11 +92,19 @@
 		48110A5C28C5D345009BD9A6 /* Rooms */ = {
 			isa = PBXGroup;
 			children = (
+				48F1CCCB28C7DE9D004637FA /* NetworkLayer */,
 				48F1CCCA28C6B1C2004637FA /* Model */,
 				48F1CCC928C6B18E004637FA /* ViewModel */,
 				48F1CCC828C6B16B004637FA /* View */,
 			);
 			path = Rooms;
+			sourceTree = "<group>";
+		};
+		486447D028CF60ED0095AA3B /* Login */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		488227E228B8A0FD0084D4A1 = {
@@ -120,8 +130,10 @@
 		488227ED28B8A0FD0084D4A1 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				486447D028CF60ED0095AA3B /* Login */,
 				48110A5C28C5D345009BD9A6 /* Rooms */,
 				488227EE28B8A0FD0084D4A1 /* AppDelegate.swift */,
+				48F1CCCC28C7F6D9004637FA /* AppCoordinator.swift */,
 				488227F028B8A0FD0084D4A1 /* SceneDelegate.swift */,
 				488227F428B8A0FD0084D4A1 /* Main.storyboard */,
 				488227F728B8A0FE0084D4A1 /* Assets.xcassets */,
@@ -161,7 +173,6 @@
 			isa = PBXGroup;
 			children = (
 				488227F228B8A0FD0084D4A1 /* RoomsViewController.swift */,
-				481109C828BE659A009BD9A6 /* RoomsNetworkManager.swift */,
 				48F1CCC328C68FB0004637FA /* RoomViewModel.swift */,
 			);
 			path = ViewModel;
@@ -173,6 +184,14 @@
 				481109C628BE63DC009BD9A6 /* Rooms.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		48F1CCCB28C7DE9D004637FA /* NetworkLayer */ = {
+			isa = PBXGroup;
+			children = (
+				481109C828BE659A009BD9A6 /* RoomsNetworkManager.swift */,
+			);
+			path = NetworkLayer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -335,6 +354,7 @@
 				488227EF28B8A0FD0084D4A1 /* AppDelegate.swift in Sources */,
 				488227F128B8A0FD0084D4A1 /* SceneDelegate.swift in Sources */,
 				48F1CCC428C68FB0004637FA /* RoomViewModel.swift in Sources */,
+				48F1CCCD28C7F6D9004637FA /* AppCoordinator.swift in Sources */,
 				481109C728BE63DC009BD9A6 /* Rooms.swift in Sources */,
 				48F1CCC628C6A65B004637FA /* FakeNetworkManager.swift in Sources */,
 			);
@@ -518,7 +538,6 @@
 				INFOPLIST_FILE = Networking/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -545,7 +564,6 @@
 				INFOPLIST_FILE = Networking/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

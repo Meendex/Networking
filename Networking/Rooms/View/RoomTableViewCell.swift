@@ -16,6 +16,12 @@ class RoomTableViewCell: UITableViewCell {
         super.awakeFromNib()
         // Initialization code
     }
+//    override func prepareForReuse() {
+//        createAtLabel.text = ""
+//        maxOccupancyLabel.text = ""
+//        OccupiedLabel.text = ""
+//        idLabel.text = ""
+//    }
     func updateData(with roomData: Rooms) {
         createAtLabel.text = roomData.createdAt
         maxOccupancyLabel.text = String(roomData.maxOccupancy)

@@ -14,31 +14,36 @@ enum NetworkError: Error {
 }
 class RoomsNetworkManager {
     let roomsURL: String = "https://61e947967bc0550017bc61bf.mockapi.io/api/v1/rooms"
-    //var networkDelegate: ViewContract?
-    
-    func getRooms(callback: @escaping(Result<[Rooms], Error>) -> Void) {
-        let urlSession = URLSession.shared
-        
+    func getRoomsAsync()async throws -> [Rooms] {
         guard let url = URL(string: roomsURL) else {
-            callback(.failure(NetworkError.invalidURL))
+            throw NetworkError.invalidURL
+        }
+        do {
+            let (data, _) = try await URLSession.shared.data(from: url)
+            let rooms = try JSONDecoder().decode([Rooms].self, from: data)
+            return rooms
+        } catch {
+            throw NetworkError.parsingFailed
+        }
+    }
+    func getRoomsClosure(callback: @escaping (Result<[Rooms], NetworkError>) -> Void) {
+        let urlSession = URLSession.shared
+        guard let url = URL(string: roomsURL) else {callback(.failure(NetworkError.invalidURL))
             return
         }
-        let dataTask = urlSession.dataTask(with: url) { data, response, error in
+        let dataTask = urlSession.dataTask(with: url) { data, _, _ in
             guard let data = data else {
                 callback(.failure(NetworkError.dataNotFound))
                 return
             }
             let jsonDecorder = JSONDecoder()
             do {
-              let rooms = try
-                jsonDecorder.decode([Rooms].self, from: data)
+                let rooms = try jsonDecorder.decode([Rooms].self, from: data)
                 callback(.success(rooms))
-                //self.networkDelegate?.setRooms(rooms: rooms)
-            }catch {
+            } catch {
                 callback(.failure(NetworkError.parsingFailed))
             }
         }
         dataTask.resume()
     }
-
 }

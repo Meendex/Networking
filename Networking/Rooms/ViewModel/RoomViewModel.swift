@@ -19,19 +19,10 @@ protocol RoomsViewModelOut {
 class RoomViewModel {
     private let networkManager: RoomsNetworkManager
     private var rooms: [Rooms] = []
-    //var dataDidReceived: (() -> Void)?
     init (networkManager: RoomsNetworkManager){
         self.networkManager = networkManager
     }
-////    func RoomsData() {
-////        networkManager.getRooms(callback: {result in
-////            switch result {
-////        case .success(let rooms): self.rooms = rooms
-////        case .failure: self.rooms = []
-////        }
-////        self.dataDidReceived?()
-////        })
-//    }
+
 }
 extension RoomViewModel: RoomsViewModelIn {
     

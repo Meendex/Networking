@@ -21,5 +21,9 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSFaceIDUsageDescription</key>
+	<string>Face ID</string>
+	<key>CFBundleIdentifier</key>
+	<string></string>
 </dict>
 </plist>

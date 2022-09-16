@@ -4,7 +4,7 @@
 //
 //  Created by Mindaugas Balakauskas on 26/08/2022.
 //
-
+import Foundation
 import UIKit
 
 class RoomsViewController: UIViewController {
@@ -12,6 +12,8 @@ class RoomsViewController: UIViewController {
     weak var coordinator: AppCoordinator?
 
     @IBOutlet weak var tableView: UITableView!
+    var name: String = ""
+    var loginViewController: LoginView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,21 +24,14 @@ class RoomsViewController: UIViewController {
                 self.tableView.reloadData()
             }
         }
-//        roomViewModel.dataDidReceived = {
-//            DispatchQueue.main.async {self.tableView.reloadData()
-//            }
-//    }
-//        roomViewModel.RoomsData()
-//        networkManager.networkDelegate = self
-//        networkManager.getRooms()
+
     }
 }
 extension RoomsViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        //if let rooms = roomViewModel.rooms {
+       
         return roomViewModel?.roomsRecordCount ?? 0
-//    }
-//        return 0
+
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if roomViewModel != nil {
@@ -51,15 +46,4 @@ extension RoomsViewController: UITableViewDataSource {
     return UITableViewCell()
     }
 }
-/*extension ViewController: ViewContract {
-    func setRooms(rooms:[Rooms]){
-        self.rooms = rooms
-        DispatchQueue.main.async {
-            self.tableView.reloadData()
-        }
-    }
-}
 
-protocol ViewContract {
-    func setRooms(rooms:[Rooms])
-}*/

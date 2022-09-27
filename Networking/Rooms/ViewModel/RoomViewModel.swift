@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Combine
 
 protocol RoomsViewModelIn {
     func getRoomsAsync() async
@@ -18,7 +19,7 @@ protocol RoomsViewModelOut {
 
 class RoomViewModel {
     private let networkManager: RoomsNetworkManager
-    private var rooms: [Rooms] = []
+    @Published var rooms: [Rooms] = []
     init (networkManager: RoomsNetworkManager){
         self.networkManager = networkManager
     }

@@ -7,12 +7,16 @@
 
 import Foundation
 
+protocol NetworkManagerActions {
+    func getRoomsAsync()async throws -> [Rooms]
+    func getRoomsClosure(callback: @escaping (Result<[Rooms], NetworkError>) -> Void)
+}
 enum NetworkError: Error {
     case invalidURL
     case dataNotFound
     case parsingFailed
 }
-class RoomsNetworkManager {
+class RoomsNetworkManager: NetworkManagerActions {
     let roomsURL: String = "https://61e947967bc0550017bc61bf.mockapi.io/api/v1/rooms"
     func getRoomsAsync()async throws -> [Rooms] {
         guard let url = URL(string: roomsURL) else {

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		480DBE7E28E5680500C466D9 /* Rooms.json in Resources */ = {isa = PBXBuildFile; fileRef = 480DBE7D28E5680500C466D9 /* Rooms.json */; };
+		480DBE8028E5686E00C466D9 /* RoomViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DBE7F28E5686E00C466D9 /* RoomViewModelTests.swift */; };
+		480DBE8428E568B400C466D9 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DBE8328E568B400C466D9 /* LoginViewModelTests.swift */; };
+		480DBE8628E5754200C466D9 /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 480DBE8528E5754200C466D9 /* FakeNetworkManager.swift */; };
 		481109C728BE63DC009BD9A6 /* Rooms.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481109C628BE63DC009BD9A6 /* Rooms.swift */; };
 		481109C928BE659A009BD9A6 /* RoomsNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 481109C828BE659A009BD9A6 /* RoomsNetworkManager.swift */; };
 		488227EF28B8A0FD0084D4A1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 488227EE28B8A0FD0084D4A1 /* AppDelegate.swift */; };
@@ -15,7 +19,6 @@
 		488227F628B8A0FD0084D4A1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488227F428B8A0FD0084D4A1 /* Main.storyboard */; };
 		488227F828B8A0FE0084D4A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 488227F728B8A0FE0084D4A1 /* Assets.xcassets */; };
 		488227FB28B8A0FE0084D4A1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 488227F928B8A0FE0084D4A1 /* LaunchScreen.storyboard */; };
-		4882280628B8A0FE0084D4A1 /* NetworkingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882280528B8A0FE0084D4A1 /* NetworkingTests.swift */; };
 		4882281028B8A0FE0084D4A1 /* NetworkingUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882280F28B8A0FE0084D4A1 /* NetworkingUITests.swift */; };
 		4882281228B8A0FE0084D4A1 /* NetworkingUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882281128B8A0FE0084D4A1 /* NetworkingUITestsLaunchTests.swift */; };
 		4882281F28B8A7AA0084D4A1 /* RoomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4882281E28B8A7AA0084D4A1 /* RoomTableViewCell.swift */; };
@@ -23,8 +26,6 @@
 		489110A828D22EFB0018555A /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489110A728D22EFB0018555A /* LoginViewModel.swift */; };
 		489110AA28D22F390018555A /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 489110A928D22F390018555A /* UserModel.swift */; };
 		48F1CCC428C68FB0004637FA /* RoomViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CCC328C68FB0004637FA /* RoomViewModel.swift */; };
-		48F1CCC628C6A65B004637FA /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CCC528C6A65B004637FA /* FakeNetworkManager.swift */; };
-		48F1CCC728C6A65B004637FA /* FakeNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CCC528C6A65B004637FA /* FakeNetworkManager.swift */; };
 		48F1CCCD28C7F6D9004637FA /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48F1CCCC28C7F6D9004637FA /* AppCoordinator.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		480DBE7D28E5680500C466D9 /* Rooms.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Rooms.json; sourceTree = "<group>"; };
+		480DBE7F28E5686E00C466D9 /* RoomViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModelTests.swift; sourceTree = "<group>"; };
+		480DBE8328E568B400C466D9 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		480DBE8528E5754200C466D9 /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
 		481109C628BE63DC009BD9A6 /* Rooms.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rooms.swift; sourceTree = "<group>"; };
 		481109C828BE659A009BD9A6 /* RoomsNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomsNetworkManager.swift; sourceTree = "<group>"; };
 		488227EB28B8A0FD0084D4A1 /* Networking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Networking.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,7 +62,6 @@
 		488227FA28B8A0FE0084D4A1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		488227FC28B8A0FE0084D4A1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4882280128B8A0FE0084D4A1 /* NetworkingTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		4882280528B8A0FE0084D4A1 /* NetworkingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingTests.swift; sourceTree = "<group>"; };
 		4882280B28B8A0FE0084D4A1 /* NetworkingUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NetworkingUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4882280F28B8A0FE0084D4A1 /* NetworkingUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingUITests.swift; sourceTree = "<group>"; };
 		4882281128B8A0FE0084D4A1 /* NetworkingUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -66,7 +70,6 @@
 		489110A728D22EFB0018555A /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		489110A928D22F390018555A /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		48F1CCC328C68FB0004637FA /* RoomViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomViewModel.swift; sourceTree = "<group>"; };
-		48F1CCC528C6A65B004637FA /* FakeNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FakeNetworkManager.swift; sourceTree = "<group>"; };
 		48F1CCCC28C7F6D9004637FA /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,8 +148,10 @@
 		4882280428B8A0FE0084D4A1 /* NetworkingTests */ = {
 			isa = PBXGroup;
 			children = (
-				4882280528B8A0FE0084D4A1 /* NetworkingTests.swift */,
-				48F1CCC528C6A65B004637FA /* FakeNetworkManager.swift */,
+				480DBE8328E568B400C466D9 /* LoginViewModelTests.swift */,
+				480DBE8528E5754200C466D9 /* FakeNetworkManager.swift */,
+				480DBE7F28E5686E00C466D9 /* RoomViewModelTests.swift */,
+				480DBE7D28E5680500C466D9 /* Rooms.json */,
 			);
 			path = NetworkingTests;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				480DBE7E28E5680500C466D9 /* Rooms.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,7 +374,6 @@
 				48F1CCCD28C7F6D9004637FA /* AppCoordinator.swift in Sources */,
 				481109C728BE63DC009BD9A6 /* Rooms.swift in Sources */,
 				489110A628D22EE10018555A /* LoginViewController.swift in Sources */,
-				48F1CCC628C6A65B004637FA /* FakeNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,8 +381,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4882280628B8A0FE0084D4A1 /* NetworkingTests.swift in Sources */,
-				48F1CCC728C6A65B004637FA /* FakeNetworkManager.swift in Sources */,
+				480DBE8428E568B400C466D9 /* LoginViewModelTests.swift in Sources */,
+				480DBE8028E5686E00C466D9 /* RoomViewModelTests.swift in Sources */,
+				480DBE8628E5754200C466D9 /* FakeNetworkManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

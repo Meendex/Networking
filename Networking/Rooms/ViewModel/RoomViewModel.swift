@@ -18,9 +18,9 @@ protocol RoomsViewModelOut {
 }
 
 class RoomViewModel {
-    private let networkManager: RoomsNetworkManager
+    private let networkManager: NetworkManagerActions
     @Published var rooms: [Rooms] = []
-    init (networkManager: RoomsNetworkManager){
+    init (networkManager: NetworkManagerActions){
         self.networkManager = networkManager
     }
 
